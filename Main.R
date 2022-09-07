@@ -72,7 +72,7 @@ DESEQDifferentialExpression <- function(rna, clinical, clinicalFactor, reference
                      values=ids, mart= mart)
       return(genes)
     }
-    ## test
+    
     df <- ens2symbol(row.names(res))
     
     res_df <- as.data.frame(res)                 
