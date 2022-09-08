@@ -28,24 +28,12 @@ DESEQDifferentialExpression <- function(rna, clinical, clinicalFactor, reference
     resLFC <- lfcShrink(dds, coef=resultsNames(dds)[2], type="apeglm")
     resLFC.Ordered<-resLFC[with(resLFC, order(abs(log2FoldChange), padj, decreasing = TRUE)), ]
     
-    # converting Ensebl id to Gene symbole using biomart
-    ens2symbol<-function(ids){
-      mart <- useDataset("hsapiens_gene_ensembl", useMart("ensembl"))
-      genes <- getBM(filters= "ensembl_gene_id", 
-                     attributes= c("ensembl_gene_id","hgnc_symbol"),
-                     values=ids, mart= mart)
-      return(genes)
-    }
+    # add symbol (gene Symbol) row to results table
+    rownames(resLFC.Ordered) <- gsub("\\..*","",rownames(resLFC.Ordered))
+    resLFC.Ordered$symbol <- (mapIds(org.Hs.eg.db, keys = rownames(resLFC.Ordered), keytype = 'ENSEMBL', column = 'SYMBOL', multiVals = "first"))
     
-    df <- ens2symbol(row.names(res))
-    
-    res_df <- as.data.frame(res)                 
-    res_df$ensembl_gene_id <- row.names(res_df)
-    res_df <- merge(df,res_df, by = "ensembl_gene_id")
-    resOrdered<-res_df[with(res_df, order(abs(log2FoldChange), padj, decreasing = TRUE)), ]
-    
-    #saving the results
-    write.csv(res_df, 
+    #save results to 'OutputFileName'
+    write.csv(resLFC.Ordered, 
               file= OutputFileName)
   }
 }
