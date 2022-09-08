@@ -46,6 +46,6 @@ DESEQDifferentialExpression <- function(rna, clinical, clinicalFactor, reference
     
     #saving the results
     write.csv(res_df, 
-              file= 'crazy.csv')
+              file= OutputFileName)
   }
 }
