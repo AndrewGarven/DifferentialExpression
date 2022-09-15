@@ -1,7 +1,7 @@
 ## The Cancer Genome Atlas (TCGA) RNA-seq Differential Expression
 
 # Project Description
-This project simplifies the process of pulling RNA-sequencing data from the open source data repository The Cancer Genome Atlas (TCGA). It then simplifies the process of performing both EdgeR and DESEQ2 differential expression. In developing a simplified workflow, this repo aims to encourage running multiple different differential expression pipelines to target exaggerated false positives As shown by Yumei Li, et al. (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02648-4)
+This project simplifies the process of pulling RNA-sequencing data from the open source data repository The Cancer Genome Atlas (TCGA). It then simplifies the process of performing both EdgeR and DESEQ2 differential expression. In developing a simplified workflow, this repo aims to encourage running multiple differential expression pipelines to target exaggerated false positives As shown by Yumei Li, et al. (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02648-4)
 
 # future developments
 1. Addition of Simple Wilcoxon rank-sum test (Proven best FDR control by Yumei Li, et al.) (September 2022)
