@@ -9,9 +9,9 @@ This project simplifies the process of pulling RNA-sequencing data from the open
 3. Comparative Statistics for each Differential Expression analysis (November 2022)
 
 # Dependancies
-TCGAbiolinks (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/TCGAbiolinks.html
-apeglm (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/apeglm.html
-biomaRt (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/biomaRt.html
-DESeq2 (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/DESeq2.html
-edgeR (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/edgeR.html
-org.Hs.eg.db (Bioconductor Package) https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html
+1. <ins>TCGAbiolinks</ins> (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/TCGAbiolinks.html
+2. <ins>apeglm</ins> (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/apeglm.html
+3. <ins>biomaRt</ins> (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/biomaRt.html
+4. <ins>DESeq2</ins> (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/DESeq2.html
+5. <ins>edgeR</ins> (Bioconductor Package) https://bioconductor.org/packages/release/bioc/html/edgeR.html
+6. <ins>org.Hs.eg.db</ins> (Bioconductor Package) https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html
