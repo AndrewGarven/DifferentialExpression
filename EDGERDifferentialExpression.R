@@ -1,5 +1,4 @@
 library('edgeR')
-library('biomaRt')
 library('org.Hs.eg.db')
 
 EDGERDifferentialExpression <- function(rna, clinical, clinicalFactor, referenceFactor, OutputFileName) {

@@ -1,7 +1,7 @@
 source("TCGAdownload.R")
 source("DESEQDifferentialExpression.R")
 source("EDGERDifferentialExpression.R")
-
+source('WILCOXONDifferentialExpression.R')
 # import TCGA dataset
 data <- TCGADownload('TCGA-BLCA','Transcriptome Profiling', 'RNA-Seq', 'STAR - Counts', 'Gene Expression Quantification')
 
@@ -14,3 +14,6 @@ DESEQDifferentialExpression(rna, clinical, 'definition', 'Solid_Tissue_Normal', 
 
 # run edgeR differential expression - details in 'EDGERDifferentialExpression.R' results saved to 'OutputFileName'
 EDGERDifferentialExpression(rna, clinical, 'definition', 'Solid_Tissue_Normal', 'edgeR_DE.csv')
+
+# run wilcoxon differential expression - details in 'WILCOXONDifferentialExpression.R' results saved to 'OutputFileName'
+WILCOXONDifferentialExpression(rna, clinical, 'definition', 'Solid_Tissue_Normal', 'WilcoxonDE.csv')

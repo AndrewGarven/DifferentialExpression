@@ -1,6 +1,6 @@
 library('apeglm')
 library("DESeq2")
-library("biomaRt")
+library('org.Hs.eg.db')
 
 DESEQDifferentialExpression <- function(rna, clinical, clinicalFactor, referenceFactor, OutputFileName) {
   #INPUT
