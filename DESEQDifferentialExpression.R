@@ -8,6 +8,10 @@ DESEQDifferentialExpression <- function(rna, clinical, clinicalFactor, reference
   # clinical = data.frame object containing clinical information for subjects in 'rna'
   # clinicalFactor = string of 'clinical' column name used as factor for differential expression
   # referenceFactor = string of 'clinicalFactor' baseline comparator (ex. 'Healthy Tissue')
+  # OutputFileName = string containing desired output file name ** must include '.csv'
+  
+  #Output
+  # .csv file (located @ 'OutputFileName' contain per gene Deseq2 differential expression analysis results
   
   if (clinicalFactor %in% colnames(clinical)) {
     index = match(clinicalFactor,colnames(clinical))

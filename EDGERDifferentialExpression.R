@@ -3,6 +3,14 @@ library('org.Hs.eg.db')
 
 EDGERDifferentialExpression <- function(rna, clinical, clinicalFactor, referenceFactor, OutputFileName) {
   #INPUT
+  # rna = data.frame object of transcriptional expression
+  # clinical = data.frame object containing clinical information for subjects in 'rna'
+  # clinicalFactor = string of 'clinical' column name used as factor for differential expression
+  # referenceFactor = string of 'clinicalFactor' baseline comparator (ex. 'Healthy Tissue')
+  # OutputFileName = string containing desired output file name ** must include '.csv'
+  
+  #Output
+  # .csv file (located @ 'OutputFileName' contain per gene EdgeR differential expression analysis results
 
   # checking that selected 'clinicalFactor' exists in clinical data.frame
   if (clinicalFactor %in% colnames(clinical)){

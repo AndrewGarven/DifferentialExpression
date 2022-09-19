@@ -2,6 +2,17 @@ library('edgeR')
 library('org.Hs.eg.db')
 
 WILCOXONDifferentialExpression <- function(rna, clinical, clinicalFactor, referenceFactor, OutputFileName) {
+  
+  #INPUT
+  # rna = data.frame object of transcriptional expression
+  # clinical = data.frame object containing clinical information for subjects in 'rna'
+  # clinicalFactor = string of 'clinical' column name used as factor for differential expression
+  # referenceFactor = string of 'clinicalFactor' baseline comparator (ex. 'Healthy Tissue')
+  # OutputFileName = string containing desired output file name ** must include '.csv'
+  
+  #Output
+  # .csv file (located @ 'OutputFileName' contain per gene Wilcoxon differential expression analysis results
+  
   if (clinicalFactor %in% colnames(clinical)){
     # obtain index of 'clinicalFactor'
     index = match(clinicalFactor,colnames(clinical))
