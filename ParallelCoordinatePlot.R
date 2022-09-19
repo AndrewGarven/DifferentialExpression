@@ -4,6 +4,8 @@ library('svglite')
 
 ParallelCoordinatePlot <- function(rna, clinical, clinicalFactor, referenceFactor, CasePerFactor, TopDiffExp, OutputFileName) {
   
+  # Added to repo as a result of Rutter et al. (https://doi.org/10.1186/s12859-019-2968-1)
+  
   #INPUT
   # rna = data.frame object of transcriptional expression
   # clinical = data.frame object containing clinical information for subjects in 'rna'
