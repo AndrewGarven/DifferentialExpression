@@ -13,7 +13,7 @@ ParallelCoordinatePlot <- function(rna, clinical, clinicalFactor, referenceFacto
   # referenceFactor = string of 'clinicalFactor' baseline comparator (ex. 'Solid Tissue Normal')
   # CasePerFactor = int object outlining the number of cases (patients, samples, etc.) you would like to visualize per group (per clinicalFactor)
   # TopDiffExp = list of strings containing the top differentially expressed Genes for visualization
-  # OutputFileName = string containing desired output file name ** must include '.svg'
+  # OutputFileName = string containing desired output file name ** must include '.pdf'
   
   #Output
   # gg parallel coordinate plot 

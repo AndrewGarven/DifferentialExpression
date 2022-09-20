@@ -3,6 +3,7 @@ source("DESEQDifferentialExpression.R")
 source("EDGERDifferentialExpression.R")
 source('WILCOXONDifferentialExpression.R')
 source('ParallelCoordinatePlot.R')
+source('VolcanoPlot.R')
 
 # import TCGA dataset
 data <- TCGADownload('TCGA-BLCA','Transcriptome Profiling', 'RNA-Seq', 'STAR - Counts', 'Gene Expression Quantification')
@@ -24,3 +25,7 @@ WILCOXONDifferentialExpression(rna, clinical, 'definition', 'Solid_Tissue_Normal
 
 # generate a parallel Coordinate Plot from top differentially expressed genes - details in 'ParallelCoordinatePlot.R' results saved to 'OutputFileName'
 ParallelCoordinatePlot(rna, clinical, 'definition', 'Solid Tissue Normal', 19, topRNA, 'PCP.svg')
+
+# generate a Volcano Plot from differentially expressed genes - details in 'VolcanoPlot.R' results saved to 'OutputFileName'
+VolconoPlotAdvanced(result, result$symbol, 10e-32, 2.0, 'volcanoyplot.pdf')
+
