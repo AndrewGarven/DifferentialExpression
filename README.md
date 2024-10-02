@@ -21,4 +21,7 @@ This project simplifies the process of pulling RNA-sequencing data from the open
 7. <ins>GGally</ins> (CRAN package) https://cran.r-project.org/web/packages/GGally/index.html
 8. <ins>svglite</ins> (CRAN package) https://cran.r-project.org/web/packages/svglite/index.html
 
- 
+## Download
+```bash
+git clone https://github.com/AndrewGarven/DifferentialExpression.git
+```
